@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style:none;
+    font-size:0;
+    /* 字体大小决定了图片见距离 */
+}
+html,body{
+    width:100%;
+    height:100%;
+    background-color:black;
+}
+ul{
+    width:100%;
+    /* 解决相邻li间距不相同 */
+    box-sizing:border-box;
+    padding:10px;
+}
+ul li{
+    display:inline-block;
+    width:25%;
+    height:75px;
+    overflow:hidden;
+    box-sizing: border-box;
+    padding:10px;
+    opacity:0;
+    /* 为了出现渐变效果0->1 */
+}
+ul li img{
+    width:100%;
+    height:100%;
+   
+}
+.showImage{
+    display:none;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:black;
+    
+    
+}
+/*图片水平垂直居中 */
+.showImage img{
+    position:absolute;
+    left:50%;
+    top:50%;
+    /* 图片大小不确定的平移,x轴,y轴*/
+    transform:translate(-50%,-50%);
+    opacity:0;
+    /* width:100%; */
+}
